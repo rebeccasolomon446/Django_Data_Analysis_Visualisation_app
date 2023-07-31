@@ -4,6 +4,8 @@
     <title>Homepage</title>
 </head>
 <body>
-    <h1>This is a profile page for {{name}}</h1>  
+    {% for character in marvel_characters %}
+        <h2>{{character}}</h2>
+    {% endfor %} 
 </body>
 </html>
