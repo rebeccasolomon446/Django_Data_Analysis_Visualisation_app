@@ -4,7 +4,8 @@ import pandas as pd
 # Create your views here.
 def hello(request):
     if (request.method == 'POST'):
-        print(request.FILES['file']) #check for any files posted, incl input id
+       file = request.FILES['file'] 
+       print(pd.read_csv(file))
     else:
         print('GET request')
     return render(request,'myApp/index.html') #render method combines parameters, context can be accessed in template
