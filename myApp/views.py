@@ -3,6 +3,7 @@ from django.http import HttpResponse
 import pandas as pd
 from pandas.io import json
 from .models import Data
+
 # Create your views here.
 def hello(request):
     if (request.method == 'POST'):
