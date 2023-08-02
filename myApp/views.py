@@ -22,6 +22,10 @@ def hello(request):
             exp = d['other_exp']
             dt = Data(name=name, price=price, rent=rent, emi=emi,tax=tax, exp=exp)
             dt.save()
+        
+        data_objects = Data.objects.all()
+        context = {'data_objects' : data_objects}
+        return render(request,'myApp/index.html', context)
     else:
         print('GET request')
     return render(request,'myApp/index.html') #render method combines parameters, context can be accessed in template
