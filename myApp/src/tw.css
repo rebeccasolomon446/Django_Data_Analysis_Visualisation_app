@@ -1,0 +1,4 @@
+/* directives, different tailwind classes to include */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
